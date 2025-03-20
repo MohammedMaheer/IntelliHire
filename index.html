@@ -9,5 +9,32 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Add this code just before the closing </body> tag -->
+<script src="https://my.voipvoip.com/webphoneWebRTCWidget/v9/js/loader-phone-fn.js?sub_v=1"></script>
+<script>
+    if (window.addEventListener) {
+        window.addEventListener('load', function() {
+            zadarmaWidgetFn(
+                'cd8c156c4598dbf25128', // Your API key
+                '6957e3b23bc60cf5b057', // Your SIP
+                'rounded', // Widget style
+                'en',     // Language
+                true,     // Enable widget
+                {right:'10px',bottom:'5px'} // Position
+            );
+        }, false);
+    } else if (window.attachEvent) {
+        window.attachEvent('onload', function(){
+            zadarmaWidgetFn(
+                'cd8c156c4598dbf25128', // Your API key
+                '6957e3b23bc60cf5b057', // Your SIP
+                'rounded', // Widget style
+                'en',     // Language
+                true,     // Enable widget
+                {right:'10px',bottom:'5px'} // Position
+            );
+        });
+    }
+</script>
   </body>
 </html>
